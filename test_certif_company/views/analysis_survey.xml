@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+
+    <!-- Survey Start -->
+        <!-- Action of Survey -->
+            <record id="action_survey" model="ir.actions.act_window">
+                <field name="name">Survey</field>
+                <field name="res_model">survey.survey</field>
+                <field name="view_type">form</field>
+            </record>
+
+        <!--  Form View of Survey -->
+            <record id="view_survey_form" model="ir.ui.view">
+                <field name="name">survey.form</field>
+                <field name="model">survey.survey</field>
+                <field name="arch" type="xml">
+                    <form string="Survey">
+                        <sheet>
+                            <group>
+                                <field name="state"/>
+                            </group>
+                            <group>
+                                <field name="sart_date"/>
+                                <field name="ot_numbers"/>
+                                <field name="survey_type"/>
+                                <field name="batch_numbers"/>
+                                <field name="lot_numbers"/>
+                                <field name="agnets_numbers"/>
+                                <field name="marque"/>
+                                <field name="tonnage"/>
+                                <field name="date_place"/>
+                                <field name="emportage_date"/>
+                                <field name="transmission_date"/>
+                                <field name="recipient_service"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+        <!--  Tree View of Survey -->
+            <record id="view_survey_tree" model="ir.ui.view">
+                <field name="name">survey.tree</field>
+                <field name="model">survey.survey</field>
+                <field name="arch" type="xml">
+                    <tree string="Survey">
+                            <field name="sart_date"/>
+                            <field name="ot_numbers"/>
+                            <field name="survey_type"/>
+                            <field name="batch_numbers"/>
+                            <field name="lot_numbers"/>
+                            <field name="agnets_numbers"/>
+                            <field name="marque"/>
+                            <field name="tonnage"/>
+                            <field name="date_place"/>
+                            <field name="emportage_date"/>
+                            <field name="transmission_date"/>
+                            <field name="recipient_service"/>
+                    </tree>
+                </field>
+            </record>
+    <!-- Survey End -->
+
+    <!-- Analysis Start -->
+        <!-- Action of analysis -->
+            <record id="action_analysis" model="ir.actions.act_window">
+                <field name="name">Analysis</field>
+                <field name="res_model">analysis.analysis</field>
+                <field name="view_type">form</field>
+            </record>
+
+        <!--  Form View of analysis -->
+            <record id="view_analysis_form" model="ir.ui.view">
+                <field name="name">analysis.form</field>
+                <field name="model">analysis.analysis</field>
+                <field name="arch" type="xml">
+                    <form string="Analysis">
+                        <sheet>
+                            <group>
+                                <field name="state"/>
+                            </group>
+                            <group>
+                                <field name="reference"/>
+                                <field name="folders_numbers"/>
+                                <field name="analysis_type"/>
+                                <field name="product"/>
+                                <field name="date_time"/>
+                                <field name="batch_numbers"/>
+                                <field name="marque"/>
+                                <field name="tonnage"/>
+                                <field name="date_time_end"/>
+                                <field name="operator_date"/>
+                                <field name="operator_name"/>
+                                <field name="resultat_date"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+        <!--  Tree View of analysis -->
+            <record id="view_analysis_tree" model="ir.ui.view">
+                <field name="name">analysis.tree</field>
+                <field name="model">analysis.analysis</field>
+                <field name="arch" type="xml">
+                    <tree string="Analysis">
+                            <field name="reference"/>
+                            <field name="folders_numbers"/>
+                            <field name="analysis_type"/>
+                            <field name="product"/>
+                            <field name="date_time"/>
+                            <field name="batch_numbers"/>
+                            <field name="marque"/>
+                            <field name="tonnage"/>
+                            <field name="date_time_end"/>
+                            <field name="operator_date"/>
+                            <field name="operator_name"/>
+                            <field name="resultat_date"/>
+                    </tree>
+                </field>
+            </record>
+    <!-- analysis End -->
+        <menuitem id="menu_survey" action="action_survey" parent="menu_module_operation" name="Survey"  />
+        <menuitem id="menu_analysis" action="action_analysis" parent="menu_module_operation" name="Analysis"  />
+    </data>
+</openerp>
